@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="1.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd">
+  <persistence-unit name="jdbc:derby:taxPU" transaction-type="RESOURCE_LOCAL">
+    <provider>oracle.toplink.essentials.PersistenceProvider</provider>
+    <class>taxkmasm.Bills</class>
+    <class>taxkmasm.Users</class>
+    <class>taxkmasm.Category</class>
+    <class>taxkmasm.Company</class>
+    <class>taxkmasm.TaxIncome</class>
+    <properties>
+      <property name="toplink.jdbc.user" value="admin"/>
+      <property name="toplink.jdbc.password" value="admin"/>
+      <property name="toplink.jdbc.url" value="jdbc:derby:tax"/>
+      <property name="toplink.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>
+    </properties>
+  </persistence-unit>
+</persistence>
